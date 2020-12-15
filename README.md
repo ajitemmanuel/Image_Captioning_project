@@ -75,3 +75,13 @@ First, we need to be able to generate a description for a photo using a trained 
 This involves passing in the start description token ‘startseq‘, generating one word, then calling the model recursively with generated words as input until the end of sequence token is reached ‘endseq‘ or the maximum description length is reached.
 
 The actual and predicted descriptions are collected and evaluated collectively using the corpus BLEU score that summarizes how close the generated text is to the expected text.
+
+## Generate New Captions
+
+Now that we know how to develop and evaluate a caption generation model, how can we use it?
+
+Almost everything we need to generate captions for entirely new photographs is in the model file.
+
+We also need the Tokenizer for encoding generated words for the model while generating a sequence, and the maximum length of input sequences, used when we defined the model (e.g. 34).
+
+We can hard code the maximum sequence length. With the encoding of text, we can create the tokenizer and save it to a file so that we can load it quickly whenever we need it without needing the entire Flickr8K dataset.
