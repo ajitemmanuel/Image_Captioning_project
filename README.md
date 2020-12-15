@@ -20,3 +20,10 @@ This Project is divided into 6 parts; they are:
 
 7)Generate New Captions
 
+##Photo and Caption Dataset
+
+A good dataset to use when getting started with image captioning is the Flickr8K dataset.
+
+The reason is because it is realistic and relatively small so that you can download it and build models on your workstation using a CPU.
+
+The definitive description of the dataset is in the paper “Framing Image Description as a Ranking Task: Data, Models and Evaluation Metrics” from 2013
